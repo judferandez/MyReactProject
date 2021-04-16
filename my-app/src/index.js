@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// or less ideally
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap';
 
 function Square(props) {
     return (
@@ -94,11 +97,11 @@ class Game extends React.Component {
                 'Go to game start';
             return (
                 <li key={move}>
-                    <button
+                    <Button variant="success"
                         onClick={() => this.jumpTo(move)}
                     >
                         {desc}
-                    </button>
+                    </Button>
                 </li>
             )
         });
